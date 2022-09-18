@@ -1,0 +1,41 @@
+<%- include("partials/header"); -%> <% /*Challenge 4&3*/ %>
+
+<h1> Home </h1>
+<p>
+ <%=startingContent%>
+ <a href="/about">Read More</a>
+</p>
+
+ <center>  <img src="homeImage2.jpeg">  </center>
+
+
+
+
+<% /*Challenge 12*/ %>
+<% // console.log(posts_array); %>
+
+<% /*Challenge 13*/ %>
+<% // let n = posts_array.length; %>
+<% // for(i=0; i<n; i++){ %>
+<% // console.log(posts_array[i].title); %>
+<% // } %>
+
+<% /*Challenge 14*/ %>
+<% // posts_array.forEach( function(element){ %>
+<% // console.log(element.title); %>
+<% // }); %>
+
+<% /*Challenge 15*/ %>
+<% posts_array.forEach( function(el){ %>
+<h1> <%=el.title%> </h1>
+
+<p>
+ <%=el.content.substring(0,100) + "..."%> <% /*Challenge 15 & 20*/ %>
+ <a href="/posts/<%=el.title%>">Read More</a> <% /*Challenge 21*/ %>
+</p>
+<% }); %>
+
+
+
+
+<%- include("partials/footer"); -%> <% /*Challenge 4&3*/ %>
